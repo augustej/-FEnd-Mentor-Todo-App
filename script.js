@@ -11,7 +11,7 @@ const filters = document.querySelector('.filters')
 
 
 // if prefers dark mode:
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+if (!window.matchMedia || window.matchMedia('(prefers-color-scheme: dark)').matches) {
     body.classList.add('dark')
 }
 
