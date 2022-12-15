@@ -207,13 +207,13 @@ function  modifyFiltersPosition(device){
     if (device == 'desktop'){
         containerToAppendFilters = document.querySelector('.tasks-list .list-style:not(.list-item)')
         filters.classList.remove('list-style')
-    }
-    else{
+        containerToAppendFilters.insertBefore(filters, containerToAppendFilters.lastElementChild)
+    } 
+    if (device == 'mobile'){
         containerToAppendFilters = document.querySelector('main')
         filters.classList.add('list-style')
+        containerToAppendFilters.insertBefore(filters, containerToAppendFilters.lastElementChild)
     }
-    containerToAppendFilters.insertBefore(filters, containerToAppendFilters.lastElementChild)
-
 }
 
 // drag and drop item
