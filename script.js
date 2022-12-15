@@ -117,6 +117,9 @@ function checkTaskOnClick(eventTarget){
         allTasks.forEach(task =>{
             if (eventTarget.closest('li') == task){
                 task.classList.toggle('checked')
+                let ariaStatus = task.firstElementChild.getAttribute('aria-checked')
+                ariaStatus == 'true' ? ariaStatus = 'false' : ariaStatus = 'true'
+                task.firstElementChild.setAttribute('aria-checked', ariaStatus)
             }
         })
         // recalculate active tasks
