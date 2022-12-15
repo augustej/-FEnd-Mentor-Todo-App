@@ -58,6 +58,12 @@ input, button, p{
     background-color: transparent;
     caret-color: var(--br-blue);
 }
+
+label, input{
+    margin-right: auto;
+    width:100%;
+}
+
 input,
 .clear-completed-btn{
     color: var(--day-dk-gray-blue);
