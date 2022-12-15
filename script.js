@@ -167,6 +167,7 @@ function createNewListItemInDom(taskText){
     let checkbox = document.createElement('div')
     checkbox.classList.add('checkbox')
     checkbox.setAttribute('role', 'checkbox')
+    checkbox.setAttribute('aria-label', taskText)
     let innerShape = document.createElement('div')
     innerShape.classList.add('inner-shape')
     let checkIcon = document.createElement('img')
